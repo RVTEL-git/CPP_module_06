@@ -4,10 +4,12 @@ CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -I$(HEADER_DIR) -g3
 NAME = convert
 
 HEADER_DIR = include
-HEADER = $(HEADER_DIR)/ScalarConverter.hpp
+HEADER = $(HEADER_DIR)/ScalarConverter.hpp \
+		 $(HEADER_DIR)/utils.hpp
 
 SRCS_DIR = source
-SRCS = $(SRCS_DIR)/ScalarConverter.cpp \
+SRCS = $(SRCS_DIR)/ScalarConverter.cpp	\
+	   $(SRCS_DIR)/utils.cpp 			\
        $(SRCS_DIR)/main.cpp
 
 OBJ_DIR = obj

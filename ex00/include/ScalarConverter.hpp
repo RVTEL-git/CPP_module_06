@@ -1,17 +1,9 @@
 #ifndef SCALARCONVERTER_HPP
 #define SCALARCONVERTER_HPP
 
+#include "utils.hpp"
 #include <string>
-
-enum Type
-{
-	EMPTY,
-	CHAR,
-	INT,
-	FLOAT,
-	DOUBLE,
-	NONE
-};
+#include <iostream>
 
 class ScalarConverter
 {
