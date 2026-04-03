@@ -2,11 +2,14 @@
 #define SCALARCONVERTER_HPP
 
 #include "utils.hpp"
-#include <string>
-#include <iostream>
 
 class ScalarConverter
 {
+	private:
+		ScalarConverter();
+		ScalarConverter(ScalarConverter &rhs);
+		~ScalarConverter();
+		ScalarConverter &operator=(ScalarConverter &src);
 	public:
 		static void	convert(char* toconv);
 };

@@ -38,7 +38,7 @@ static inline bool	simple_check(const std::string arg, Type *type)
 		*type = EMPTY;
 		return (true);
 	}
-	if (!arg[1] && isalpha(arg[0]))
+	if (!arg[1] && isascii(arg[0]) && !isdigit(arg[0]))
 	{
 		*type = CHAR;
 		return (true);
@@ -55,6 +55,7 @@ Type parser(const std::string arg)
 
 	if (!simple_check(arg, &ret))
 	{
+		
 		size_t	i = 0;
 		size_t	len = arg.length();
 		while (i < len)
